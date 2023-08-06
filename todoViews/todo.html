@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo List</title>
+    <style>
+      /* Navbar styling */
+
+      nav {
+        background-color: #333;
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #111;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+
+      #todo-list {
+        width: 45%;
+        padding: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background: white;
+        margin-right: 5%;
+      }
+
+      #user-input-section {
+        width: 45%;
+        padding: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background: white;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        color: #444;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #userInput, #prioritySelector {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #submitTodo {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background: #008CBA;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      #submitTodo:hover {
+        background: #007B9A;
+      }
+
+      #todo-item {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #todo-item li {
+        background: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/todo">Todo</a>
+      <div id="user-info" style="color:white" >
+        <!-- this will show the username and logout button -->
+      </div>
+
+    </nav>
+
+    <!-- Page content -->
+    <div class="content">
+      <div id="todo-list">
+        <h1>Todo List</h1>
+        <ul id="todo-item"></ul>
+      </div>
+
+      <div id="user-input-section">
+        <input id="userInput" placeholder="Kya socha h krne ka" />
+        <select id="prioritySelector">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button id="submitTodo">Add Todo</button>
+      </div>
+    </div>
+
+  </body>
+  <script src="/todoScript.js"></script>
+</html>
